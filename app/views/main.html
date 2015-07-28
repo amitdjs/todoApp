@@ -1,0 +1,24 @@
+<div class="jumbotron">
+  <h1>Team Todo app</h1>
+  <p class="lead">
+    Current Tasks.
+  </p>
+  <p><a class="btn btn-lg btn-success" data-ng-href="#/">{{main.userType.type}}!<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
+
+<div class="row marketing">
+  <h4></h4>
+  <div data-ng-repeat="tasks in main.awesomeThings">
+    <h2>{{$index}}</h2>
+    <div data-ng-repeat="details in tasks" class="ml5p">
+      <p><input type="checkbox" data-ng-model="details.value" data-ng-disabled="{{main.userType.readDisabled}}"/>
+          {{details.text}}
+      </p>
+    </div>
+  </div>
+  <div data-ng-if="!main.userType.addDisabled" > <button data-ng-click="main.addMore()"> Add Task</button>
+    <div data-ng-show="main.addNewTasks">
+      <add-task></add-task>
+    </div>
+  </div>
+</div>
