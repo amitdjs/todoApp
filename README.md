@@ -1,12 +1,8 @@
 # team-todo
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.12.0.
-
 ## Build & development
 
 Run `grunt` for building and `grunt serve` for preview.
+In url pass user=<admin/mod/guest> for each view respectively
 
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
+---yeoman scaffolding used---

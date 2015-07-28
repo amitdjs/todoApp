@@ -60,7 +60,7 @@ angular.module('teamTodoApp.services', [])
       },
       getUserType: function (type) {
         var deferred = $q.defer();
-        deferred.resolve(users[type]);
+        deferred.resolve(users[type] || users.guest);
         return deferred.promise;
       },
       addTask: function (task) {
